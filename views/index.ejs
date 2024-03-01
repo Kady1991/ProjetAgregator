@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/main.css" />
+    <!-- Lien vers le fichier CSS externe -->
+    <title>Div de Vidéo avec Texte</title>
+  </head>
+
+  <body>
+    <h1>INFOS DU MONDE</h1>
+
+    <div class="container">
+      <!-- BELGIQUE -->
+      <div class="item red img-responsive">
+        <h2>BELGIQUE</h2>
+        <h2><%= apiWeather.Brxl.name %></h2>
+        <img
+          src="https://openweathermap.org/img/wn/<%= apiWeather.Brxl.icon %>@2x.png"
+        />
+        <p><%= apiWeather.Brxl.temp %>C°</p>
+        <p><%= apiWeather.Brxl.timezone %>21 décembre 2023</p>
+        <p>
+          <strong> <%= apiWeather.Brxl.main %> </strong><br />
+          <%= apiWeather.Brxl.description %>
+        </p>
+      </div>
+
+      <!-- FIN BELGIQUE -->
+
+      <!-- FRANCE -->
+
+      <div class="item blue img-responsive">
+        <h2>FRANCE</h2>
+        <h2><%= apiWeather.FR.name %></h2>
+        <img
+          src="https://openweathermap.org/img/wn/<%= apiWeather.FR.icon %>@2x.png"
+        />
+        <p><%= apiWeather.FR.temp %>C°</p>
+        <p><%= apiWeather.FR.timezone %>22 décembre 2023</p>
+        <p>
+          <strong> <%= apiWeather.FR.main %> </strong><br />
+          <%= apiWeather.FR.description %>
+        </p>
+      </div>
+
+      <!-- FIN FRANCE -->
+
+      <!-- <h1>Mali</h1> -->
+      <div class="item green img-responsive">
+        <h2>
+          <h2>MALI</h2>
+          <h2><%= apiWeather.Mali.name %></h2>
+        </h2>
+        <img
+          src="https://openweathermap.org/img/wn/<%= apiWeather.Mali.icon %>@2x.png"
+        />
+        <p><%= apiWeather.Mali.temp %>C°</p>
+        <p><%= apiWeather.Mali.timezone %>22 décembre 2023</p>
+        <p>
+          <strong> <%= apiWeather.Mali.main %> </strong><br />
+          <%= apiWeather.Mali.description %>
+        </p>
+      </div>
+    </div>
+
+    <!-- BLAGUES -->
+
+    <div class="blagues">
+      <h2 class="titre">LA BLAGUE DU JOUR</h2>
+      <!-- <p><img class="imgBlague" src="https://www.blablagues.net/uploads/images/famille/yaa.jpg" alt=""></p> -->
+
+      <p><%= blague.text %></p>
+    </div>
+
+    <!-- <h1>FIN Mali</h1> -->
+
+    <!-- <h1>Debut citation drole </h1> -->
+
+    <!-- <div class="container">
+        <div class="item red img-responsive">
+            <h2>PARIS</h2>
+            <p>Température</p>
+            <p>
+                <%= apiWeather.temperatures%>
+            </p>
+            <P>Heure actuelle</P>
+        </div>
+
+        <div class="item blue img-responsive">
+            <h2>FORMATION</h2>
+            <p>DORIFOR</p>
+            <p>
+                <%= apiWeather.temperatures %>
+            </p>
+            <P>Heure actuelle</P>
+        </div>
+    </div> -->
+  </body>
+</html>
